@@ -98,48 +98,6 @@
     </tr>
 
 
-<tr onmouseout="alignerf_stop()" onmouseover="alignerf_start()">
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <div class="two" id='alignerf_image' style="position: relative; width: 160px; height: auto;">
-        <!-- First image initially visible -->
-        <img src='images/faces.png' id="firstImage" style="position: absolute; width: 100%; transition: opacity 0.5s; opacity: 1;" alt="First Image">
-        <!-- Second image initially hidden -->
-        <img src='images/mlp.png' id="secondImage" style="position: absolute; width: 100%; transition: opacity 0.5s; opacity: 0;" alt="Second Image">
-      </div>
-    </div>
-    <script type="text/javascript">
-      function alignerf_start() {
-        document.getElementById('firstImage').style.opacity = "0";
-        document.getElementById('secondImage').style.opacity = "1";
-      }
-
-      function alignerf_stop() {
-        document.getElementById('firstImage').style.opacity = "1";
-        document.getElementById('secondImage').style.opacity = "0";
-      }
-      alignerf_stop(); // Initially set to show the first image
-    </script>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <a href="https://yifanjiang19.github.io/alignerf">
-      <span class="papertitle">Synthetic Thermal and RGB Videos for Automatic Pain Assessment utilizing a Vision-MLP Architecture</span>
-    </a>
-    <br>
-    <strong>Stefanos Gkikas</strong>, Manolis Tsiknakis
-    <br>
-    <em>Frontiers in Pain Research</em>, 2023
-    <br>
-    <a href="https://github.io/">github</a> /
-    <a href="http://arxiv.org">arXiv</a>
-    <p> The proposed framework comprises four pivotal modules: the Spatial Module, responsible for extracting embeddings from videos; the Heart Rate Encoder, 
-      tasked with mapping heart rate signals into a higher dimensional space; the AugmNet, designed to create learning-based augmentations 
-      in the latent space; and the Temporal Module, which utilizes the extracted video and heart rate embeddings for the final assessment.</p>
-  </td>
-</tr>
-
-
-
 
 
 		  
@@ -148,26 +106,28 @@
 
 		  
 
-<tr onmouseout="alignerf_stop()" onmouseover="alignerf_start()">
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='alignerf_image'>
-              <img src='images/faces.png' width="160"></div>
-            <img src='images/mlp.png' width="160">
-          </div>
-          <script type="text/javascript">
-            function alignerf_start() {
-              document.getElementById('alignerf_image').style.opacity = "1";
-            }
+<div class="one">
+  <div class="two" id='alignerf_image' style="position: relative; width: 160px; height: 160px;">
+    <!-- First image -->
+    <img src='images/faces.png' style="position: absolute; width: 100%; height: 100%; transition: opacity 0.5s; opacity: 1;" alt="Faces Image">
+    <!-- Second image, initially hidden -->
+    <img src='images/mlp.png' style="position: absolute; width: 100%; height: 100%; transition: opacity 0.5s; opacity: 0;" alt="MLP Image">
+  </div>
+</div>
 
-            function alignerf_stop() {
-              document.getElementById('alignerf_image').style.opacity = "0";
-            }
-            alignerf_stop()
-          </script>
+<script type="text/javascript">
+  document.getElementById('alignerf_image').onmouseover = function() {
+    this.children[0].style.opacity = '0';  // Hide first image
+    this.children[1].style.opacity = '1';  // Show second image
+  };
+  document.getElementById('alignerf_image').onmouseout = function() {
+    this.children[0].style.opacity = '1';  // Show first image
+    this.children[1].style.opacity = '0';  // Hide second image
+  };
+</script>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://yifanjiang19.github.io/alignerf">
+          <a href="https://yifanjiang19">
             <span class="papertitle">Synthetic Thermal and RGB Videos for Automatic Pain Assessment utilizing a Vision-MLP Architecture</span>
           </a>
           <br>
