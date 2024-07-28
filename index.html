@@ -97,6 +97,68 @@
       </td>
     </tr>
 
+<style>
+  .image-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .image-container img {
+    width: 100%;
+    transition: opacity 0.5s ease;
+  }
+
+  .image-container .second-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .image-container:hover .first-image {
+    opacity: 0;
+  }
+
+  .image-container:hover .second-image {
+    opacity: 1;
+  }
+</style>
+
+<tr>
+  <td style="padding:20px;width:25%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='bog_image' class="image-container">
+        <img src='images/mlp.png' class="first-image" alt="MTL">
+        <img src='images/faces.png' class="second-image" alt="Second Image">
+      </div>
+    </div>
+  </td>
+  <td style="padding:20px;width:75%;vertical-align:middle">
+    <a href="https://www.frontiersin.org/journals/pain-research/articles/10.3389/fpain.2024.1372814/full">
+      <span class="papertitle">Synthetic Thermal and RGB Videos for Automatic Pain Assessment utilizing a Vision-MLP Architecture</span>
+    </a>
+    <br>
+    <strong>Stefanos Gkikas</strong>,
+     Manolis Tsiknakis
+ 
+    <br>
+    <em>Frontiers in Pain Research</em>, 2023
+    <br>
+    <a href="https://github.io/">github</a>
+	          /
+        <a href="http://arxiv.org">arXiv</a>
+    <p> The proposed framework comprises four pivotal modules: the Spatial Module, responsible for extracting embeddings from videos; the Heart Rate Encoder, 
+	    tasked with mapping heart rate signals into a higher dimensional space; the AugmNet, designed to create learning-based augmentations 
+	    in the latent space; and the Temporal Module, which utilizes the extracted video and heart rate embeddings for the final assessment.</p>
+  </td>
+</tr>
+
+
+
+
+
+
+		  
 
 <tr>
   <td style="padding:20px;width:25%;vertical-align:middle">
