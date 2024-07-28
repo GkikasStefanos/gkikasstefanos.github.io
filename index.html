@@ -102,10 +102,11 @@
 <tr>
   <td style="padding:20px;width:25%;vertical-align:middle">
     <div class="one">
-      <!-- Added a unique class 'hover-image-swap' to the container div -->
-      <div class="two hover-image-swap" id='bog_image' style="position: relative;">
-        <img src='images/mlp.png' width="100%" alt="MTL" style="position: absolute; left: 0; top: 0; transition: opacity 0.5s;">
-        <img src='images/faces.png' width="100%" alt="Second Image" style="position: absolute; left: 0; top: 0; opacity: 0; transition: opacity 0.5s;">
+      <div class="two hover-image-swap" id='bog_image' style="position: relative; width: 100%; height: auto;">
+        <!-- First image is visible initially -->
+        <img src='images/mlp.png' style="position: absolute; left: 0; top: 0; width: 100%; transition: opacity 0.5s; z-index: 1;" alt="MTL">
+        <!-- Second image is hidden initially -->
+        <img src='images/faces.png' style="position: absolute; left: 0; top: 0; width: 100%; opacity: 0; transition: opacity 0.5s; z-index: 0;" alt="Second Image">
       </div>
     </div>
   </td>
@@ -125,14 +126,28 @@
 </tr>
 
 <style>
-/* Apply hover effects only to the container with the unique class */
-.hover-image-swap:hover img:first-child {
-  opacity: 0;
-}
-.hover-image-swap:hover img:nth-child(2) {
-  opacity: 1;
-}
+  /* Ensure the hover effect is isolated to this component only */
+  .hover-image-swap img:first-child {
+    opacity: 1; /* Make sure the first image is visible */
+    z-index: 1; /* It should be on top initially */
+  }
+
+  .hover-image-swap img:nth-child(2) {
+    opacity: 0; /* Second image is hidden */
+    z-index: 0; /* It's below the first image */
+  }
+
+  .hover-image-swap:hover img:first-child {
+    opacity: 0; /* Hide the first image on hover */
+    z-index: 0; /* Move it behind */
+  }
+
+  .hover-image-swap:hover img:nth-child(2) {
+    opacity: 1; /* Show the second image on hover */
+    z-index: 1; /* Bring it to the front */
+  }
 </style>
+
 	  
 
 		  
