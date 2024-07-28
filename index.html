@@ -99,11 +99,11 @@
 
 
 
-		  
 <tr>
   <td style="padding:20px;width:25%;vertical-align:middle">
     <div class="one">
-      <div class="two" id='bog_image' style="position: relative;">
+      <!-- Added a unique class 'hover-image-swap' to the container div -->
+      <div class="two hover-image-swap" id='bog_image' style="position: relative;">
         <img src='images/mlp.png' width="100%" alt="MTL" style="position: absolute; left: 0; top: 0; transition: opacity 0.5s;">
         <img src='images/faces.png' width="100%" alt="Second Image" style="position: absolute; left: 0; top: 0; opacity: 0; transition: opacity 0.5s;">
       </div>
@@ -125,13 +125,17 @@
 </tr>
 
 <style>
-.two:hover img:first-child {
+/* Apply hover effects only to the container with the unique class */
+.hover-image-swap:hover img:first-child {
   opacity: 0;
 }
-.two:hover img:nth-child(2) {
+.hover-image-swap:hover img:nth-child(2) {
   opacity: 1;
 }
 </style>
+	  
+
+		  
 
 
 
