@@ -101,7 +101,46 @@
 
 
 
+<tr onmouseout="alignerf_stop()" onmouseover="alignerf_start()">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='twins'>
+              <img src='images/faces' width="160" height="130"></div>
+            <img src='images/mlp' width="160">
+          </div>
+          <script type="text/javascript">
+            function alignerf_start() {
+              document.getElementById('twins').style.opacity = "1";
+            }
 
+            function alignerf_stop() {
+              document.getElementById('twins').style.opacity = "0";
+            }
+            alignerf_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://y">
+            <span class="papertitle">Twins-PainViT: Towards a Modality-Agnostic Vision Transformer Framework for Multimodal Automatic Pain Assessment 
+		    using Facial Videos and fNIRS</span>
+          </a>
+          <br>
+           <strong>Stefanos Gkikas</strong>,
+           Manolis Tsiknakis
+	    <br>
+	    <em>12th International Conference on Affective Computing & Intelligent Interaction </em>, 2023
+	    <br>
+	     <span style="color: #DE3163;">Accepted-Pending Publication</span>
+	    <br>
+	    <a href="https://gkikasstefanos.github.io/code_not_available.html" style="color:#0a7e6a;">GitHub</a>
+		          /
+	        <a href="https://arxiv.org" style="color:#0a7e6a;">arXiv</a>
+		
+	    <p> The proposed multimodal framework utilizes facial videos and fNIRS and presents a modality-agnostic approach, alleviating the need for 
+		    domain-specific models. Employing a dual ViT configuration and adopting waveform representations for the fNIRS, as well as for 
+		    the extracted embeddings from the two modalities, demonstrate the efficacy of the proposed method.</p>
+	  </td>
+	</tr>
 	
 
 		  
@@ -110,8 +149,8 @@
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
             <div class="two" id='synthetic'>
-              <img src='images/mlp.png' width="160" height="90"></div>
-            <img src='images/faces.png' width="160">
+              <img src='images/faces.png' width="160" height="90"></div>
+            <img src='images/mlp.png' width="160">
           </div>
           <script type="text/javascript">
             function synthetic_start() {
